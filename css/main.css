@@ -1,0 +1,20 @@
+:root{
+--color-background: #fffdf7;
+--color-background: #212121;
+--color-background: #000000;
+--color-background: #4f4f4f;
+--color-background: #90908e;
+--color-background: #ffbf00;
+--color-background: #fff2cc;
+--color-background: #ffffff;
+--color-background: #e74c3c;
+--color-background: #2ecc71;
+--color-background: #cccccc;
+
+
+}
+
+
+html, body{
+    background-color: rgb(255, 0, 0);
+}

@@ -447,8 +447,8 @@ background-image: url(../img/bg-icons-2.png);
     border-radius: 120px;
     background-color: var(--color-secondary);
     position: absolute;
-    left: 0;
-    right: 25px;
+    left: auto;
+    right: auto;
 }
 
 .card-reserva-white{

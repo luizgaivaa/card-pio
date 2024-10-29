@@ -18,7 +18,7 @@ cardapio.metodos = {
     //obtem a lista de itens do cardápio
     obterItensCardapio: (categoria = 'burgers', vermais = false) => {
         var filtro = MENU[categoria]
-        console.log(filtro)
+       // console.log(filtro)
         if(!vermais){
             $("#itensCardapio").html('')
             $("#btnVerMais").removeClass('hidden');
@@ -26,7 +26,7 @@ cardapio.metodos = {
         //$("#itensCardapio").html('')
         
         $.each(filtro, (i, e) => {
-            console.log(e.name);
+          //  console.log(e.name);
             // let temp = cardapio.templates.item;
             let temp = cardapio.templates.item.replace(/\${img}/g, e.img)
             .replace(/\${name}/g, e.name)

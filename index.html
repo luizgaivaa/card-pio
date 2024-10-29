@@ -234,37 +234,37 @@
 
                     <div class="row mb-5 text-center mb-5 d-flex">
                         <div class="col-2">
-                            <a class="btn btn-white btn-sm mr-3">
+                            <a id="menu-burguers" class="btn btn-white btn-sm mr-3 active" onclick="cardapio.metodos.obterIntensCardapio('burguers')">
                                 <i class="fas fa-burger"></i>&nbsp;Burguers
                             </a>
                         </div>
 
                         <div class="col-2">
-                            <a class="btn btn-white btn-sm mr-3">
+                            <a id="menu-pizzas" class="btn btn-white btn-sm mr-3" onclick="cardapio.metodos.obterIntensCardapio('pizzas')">
                                 <i class="fas fa-pizza-slice"></i>&nbsp;Pizzas
                             </a>
                         </div>
 
                         <div class="col-2">
-                            <a class="btn btn-white btn-sm mr-3">
+                            <a id="menu-churrasco" class="btn btn-white btn-sm mr-3" onclick="cardapio.metodos.obterIntensCardapio('churrasco')">
                                 <i class="fas fa-drumstick-bite"></i>&nbsp;Churrasco
                             </a>
                         </div>
 
                         <div class="col-2">
-                            <a class="btn btn-white btn-sm mr-3">
+                            <a id="menu-steaks" class="btn btn-white btn-sm mr-3" onclick="cardapio.metodos.obterIntensCardapio('steaks')">
                                 <i class="fas fa-bacon"></i>&nbsp;Steaks
                             </a>
                         </div>
 
                         <div class="col-2">
-                            <a class="btn btn-white btn-sm mr-3">
+                            <a id="menu-bebidas" class="btn btn-white btn-sm mr-3" onclick="cardapio.metodos.obterIntensCardapio('bebidas')">
                                 <i class="fas fa-cocktail"></i>&nbsp;Bebidas
                             </a>
                         </div>
 
                         <div class="col-2">
-                            <a class="btn btn-white btn-sm mr-3">
+                            <a id="menu-sobremesas" class="btn btn-white btn-sm mr-3" onclick="cardapio.metodos.obterIntensCardapio('sobremesas')">
                                 <i class="fas fa-ice-cream"></i>&nbsp;Sobremesas
                             </a>
                         </div>
@@ -273,7 +273,8 @@
                 </div>
 
                 <div class="col-12">
-                    <div class="row" id="items_cardapio">
+                    <div class="row" id="itens_cardapio">
+
                         <div class="col-3">
 
                             <div class="card card-item">
@@ -354,7 +355,7 @@
                             </div>
                         </div>
 
-                        <div class="col-3">
+                        <div class="col-3   ">
                             <div class="card card-item">
 
                                 <div class="img-produto">
@@ -387,7 +388,7 @@
                 </div>
 
                 <div class="col-12 text-center">
-                    <a class="btn btn-white btn-sm mt-4">Ver mais</a>
+                    <a id="btnVerMais" class="btn btn-white btn-sm mt-4" onclick="cardapio.metodos.VerMais()">Ver mais</a>
                 </div>
 
             </div>
@@ -825,6 +826,7 @@
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./js/popper.min.js"></script>
     <script type="text/javascript" src="./js/dados.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
 
 
 </body>

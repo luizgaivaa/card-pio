@@ -10,21 +10,29 @@
 
     <title>Restaurante - Bem vindo</title>
 
-    <link rel="icon" href="img/icon.png">
+    <link rel="icon" href="">
 
     <link rel="stylesheet" href="./css/bootstrap.min.css">
 
     <link rel="stylesheet" href="./css/fontawesome.css">
 
     <link rel="stylesheet" href="./css/main.css">
+     
+    <link rel="stylesheet" href="./css/animate.css">
 
 </head>
 
 <body>
 
+    <div class="container-mensagens" id="container-mensagens">
+
+    
+    
+    </div>
+
     <a class="botao-carrinho">
-        <div class="badge-total-carrinho">8</div>
-        <i class="fa fa-shopping-bag"></i>
+        <div class="badge-total-carrinho">0</div>
+        <i class="fas fa-shopping-bag"></i>
     </a>
 
     <section class="header">
@@ -64,12 +72,11 @@
                     </ul>
 
                     <a class="btn btn-white btn-icon">
-                        <div class="badge-total-carrinho"></div>
-
+                       
                         Meu carrinho
 
                         <span class="icon">
-
+                            <div class="container-total-carrinho badge-total-carrinho">0</div>
                             <i class="fas fa-shopping-bag"></i>
 
                         </span>
@@ -100,7 +107,7 @@
 
                         <div>
 
-                            <a class="btn btn-yellow mt-4 mr-3" href="img/ana.jpg">Ver Cardápio</a>
+                            <a class="btn btn-yellow mt-4 mr-3" href="">Ver Cardápio</a>
 
                             <a class="btn btn-white btn-icon-left mt-4">
 
@@ -118,13 +125,14 @@
 
                     </div>
 
-                    <a class="btn btn-sm btn-white btn-social mt-4 mr-3">
+                    <a class="btn btn-sm btn-white btn-social mt-4 mr-3" href="">
 
                         <i class="fab fa-instagram"></i>
 
                     </a>
 
-                    <a class="btn btn-sm btn-white btn-social mt-4 mr-3">
+                    <a class="btn btn-sm btn-white btn-social mt-4 mr-3"
+                        href="">
 
                         <i class="fab fa-facebook"></i>
 
@@ -136,7 +144,7 @@
 
                     </a>
 
-                    <a class="btn btn-sm btn-white btn-social mt-4">
+                    <a class="btn btn-sm btn-white btn-social mt-4" href="">
 
                         <i class="fab fa-youtube"></i>
 
@@ -160,11 +168,11 @@
                         <br>A comida chegou quente e <br>
                         muito saborosa!"
 
-                        <spam class="card-case-name">
+                        <span class="card-case-name">
 
                             <b>Steve - Minecraft</b>
 
-                        </spam>
+                        </span>
 
                     </div>
 
@@ -288,43 +296,47 @@
 
                 </div>
 
-                <div class="container-menu col-12 text-center">
+                <div class="col-12 container-menu">
 
-                    <a id="menu-burgers" class="btn-white btn-sm mr-3 active" onclick="cardapio.metodos.obterItensCardapio('burgers')">
+                    <a id="menu-burgers" class="btn btn-white btn-sm mr-3" onclick='cardapio.metodos.obterItensCardapio("burgers")'>
 
                         <i class="fas fa-hamburger"></i>&nbsp;Burguer
 
                     </a>
 
-                    <a id="menu-pizzas" class="btn-white btn-sm mr-3" onclick="cardapio.metodos.obterItensCardapio('pizzas')">
+                    <a id="menu-pizzas" class="btn btn-white btn-sm mr-3" onclick="cardapio.metodos.obterItensCardapio('pizzas')">
 
                         <i class="fas fa-pizza-slice"></i>&nbsp;Pizzas
 
                     </a>
 
-                    <a id="menu-churrasco" class="btn-white btn-sm mr-3" onclick="cardapio.metodos.obterItensCardapio('churrasco')">
+                    <a id="menu-churrasco" class="btn btn-white btn-sm mr-3" onclick="cardapio.metodos.obterItensCardapio('churrasco')">
 
                         <i class="fas fa-drumstick-bite"></i>&nbsp;Churrasco
 
                     </a>
 
-                    <a id="menu-steaks" class="btn-white btn-sm mr-3" onclick="cardapio.metodos.obterItensCardapio('steaks')">
+                    <a id="menu-steaks" class="btn btn-white btn-sm mr-3" onclick="cardapio.metodos.obterItensCardapio('steaks')">
 
                         <i class="fas fa-bacon"></i>&nbsp;Steaks
 
                     </a>
 
-                    <a id="menu-bebidas" class="btn-white btn-sm mr-3" onclick="cardapio.metodos.obterItensCardapio('bebidas')">
+                    <a id="menu-bebidas" class="btn btn-white btn-sm mr-3" onclick="cardapio.metodos.obterItensCardapio('bebidas')">
 
                         <i class="fas fa-cocktail"></i>&nbsp;Bebidas
 
                     </a>
 
-                    <a id="menu-sobremesas" class="btn-white btn-sm mr-3" onclick="cardapio.metodos.obterItensCardapio('sobremesas')">
+                    <a id="menu-sobremesas" class="btn btn-white btn-sm mr-3" onclick="cardapio.metodos.obterItensCardapio('sobremesas')">
 
                         <i class="fas fa-ice-cream"></i>&nbsp;Sorvete
 
                     </a>
+
+                    
+
+                        
 
                 </div>
 
@@ -332,11 +344,14 @@
 
                     <div class="row" id="itensCardapio">
 
+                       
                     </div>
 
-                    <div class="col-12 text-center mt-4">
+                    <div class="col-12 text-center mt-4" >
 
-                        <a id="btnVerMais" class="btn btn-white btn-sm" onclick="cardapio.metodos.verMais()">Ver mais</a>
+                        <a id="btnVerMais" name="btnVerMais" onclick='cardapio.metodos.verMais()' class="btn btn-white btn-sm">Ver mais</a>
+
+                        
 
                     </div>
 
@@ -638,9 +653,7 @@
 
     </section>
 
-
-
-    <div class="modal-full" id="modalCarrinho" hidden>
+    <div class="modal-full hidden" id="modalCarrinho">
 
         <div class="m-header">
 
@@ -673,7 +686,7 @@
 
             <div class="container">
 
-                <div id="itensCarrinho" class="row mr-0 ml-0 hidden">
+                <div id="itensCarrinho" class="row mr-0 ml-0">
 
                     <div class="col-12 item-carrinho">
 
@@ -925,9 +938,9 @@
 
                 </div>
 
-                <div id="localEntrega" class="row mr-0 ml-0">
+                <div id="localEntrega" class="row mr-0 ml-0 ">
 
-                    <div id="localEntrega" class="row mr-0 ml-0 hidden">
+                    <div id="localEntrega" class="row mr-0 ml-0 ">
 
                         <div class="col-4">
 
@@ -990,108 +1003,82 @@
                         <div class="col-6">
 
                             <div class="form-group">
-    
+
                                 <label>Cidade:</label>
-    
-                                <input id="txtCidade" type="text" class="form-control" />
-    
+
+                                <input id="txtEndereco" type="text" class="form-control" />
+
                             </div>
-    
+
                         </div>
-    
+
                         <div class="col-4">
-    
+
                             <div class="form-group">
-    
+
                                 <label>Complemento:</label>
-    
-                                <input id="txtComplemento" type="text" class="form-control" />
-    
+
+                                <input id="txtBairro" type="text" class="form-control" />
+
                             </div>
-    
+
                         </div>
-    
+
                         <div class="col-2">
-    
+
                             <div class="form-group">
-    
+
                                 <label>UF:</label>
-    
-                                <select id="DDluf" class="form-control">
-    
-                                    <option value=" ">...</option>
-    
+
+                                <select  class="form-control" id="">
+                                    <option value="">--</option>
                                     <option value="AC">AC</option>
-    
                                     <option value="AL">AL</option>
-    
-                                    <option value="AM">AM</option>
-    
                                     <option value="AP">AP</option>
-    
+                                    <option value="AM">AM</option>
                                     <option value="BA">BA</option>
-    
                                     <option value="CE">CE</option>
-    
                                     <option value="DF">DF</option>
-    
                                     <option value="ES">ES</option>
-    
                                     <option value="GO">GO</option>
-    
                                     <option value="MA">MA</option>
-    
                                     <option value="MT">MT</option>
-    
                                     <option value="MS">MS</option>
-    
                                     <option value="MG">MG</option>
-    
                                     <option value="PA">PA</option>
-    
                                     <option value="PB">PB</option>
-    
                                     <option value="PR">PR</option>
-    
-                                    <option value="PB">PB</option>
-    
+                                    <option value="PE">PE</option>
                                     <option value="PI">PI</option>
-    
                                     <option value="RJ">RJ</option>
-    
                                     <option value="RN">RN</option>
-    
                                     <option value="RS">RS</option>
-    
                                     <option value="RO">RO</option>
-    
                                     <option value="RR">RR</option>
-    
                                     <option value="SC">SC</option>
-    
                                     <option value="SP">SP</option>
-    
                                     <option value="SE">SE</option>
-    
                                     <option value="TO">TO</option>
-    
+
                                 </select>
-    
+
                             </div>
-                            
+
                         </div>
 
                     </div>
 
+                    
+
                 </div>
 
-                <div id="resumoCarrinho" class="row mr-0 ml-0 ">
-
+                <div id="resumoCarrinho" class="row mr-0 ml-0">
+                        
                     <div class="col-12">
 
-                        <p class="title-carinho mt-4">
+                        <p class="title-carrinho mt-4">
 
-                            <b>Itens do pedido:</b>
+                            <b>Itens do Pedido:</b>
 
                         </p>
 
@@ -1113,69 +1100,65 @@
 
                                     <p class="title-produto-resumo">
 
-                                        <b>Nome do produto</b>
+                                        <b>Nome do Produto</b>
 
                                     </p>
 
                                     <p class="price-produto-resumo">
 
-                                        <b>R$: 100,00</b>
+                                        <b>R$ 100,00</b>
 
                                     </p>
 
                                 </div>
 
                                 <p class="quantidade-produto-resumo">
-
                                     x <b>3</b>
-
                                 </p>
 
                             </div>
 
+                            
+
                         </div>
 
-                    
+                    </div>
 
-                        <div class="col-12">
+                    <div class="col-12">
 
-                            <p class="title-carrinho mt-4">
-    
-                                <b>Local da entrega</b>
-    
-                            </p>
-    
+                        <p class="title-carrinho mt-4">
+
+                            <b>Local da Entrega:</b>
+
+                        </p>
+
+                    </div>
+
+                    <div class="col-12 item-carrinho resumo">
+
+                        <div class="img-map">
+                            <i class="fas fa-map-marked-alt"></i>
                         </div>
-    
-                        <div class="col-12 item-carrinho resumo">
-    
-                            <div class="img-map">
-    
-                                <i class="fas fa-map-marked-alt"></i>
-    
-                            </div>
-    
-                            <div class="dados-produto">
-    
+
+                        <div class="dados-produto">
+                            <p class="dados-produto">
                                 <p class="texto-endereco">
-    
-                                    <b id="resumoEndereeco">Rua Aloedil da Silva, bairro Jd Rondônia</b>
-    
+                                    <b id="resumoEndereco">Rua dos Bobos, 0, bairro Itamaraty</b>
                                 </p>
-    
-                                <p class="cidade-endereco" id="cidadeEndereco">Rondonópolis-MT CEP 78.730-504</p>
-    
-                            </div>
-        
+                            
+                                <p class="cidade-endereco" id="cidadeEndereco">
+                                    São Paulo - SP CEP 00000-000
+                                </p>
+                            </p>
                         </div>
-
-                    </div>  
-
+                    </div>
+                    
                 </div>
-
             </div>
 
         </div>
+
+
 
 
         <div class="m-footer">
@@ -1235,8 +1218,10 @@
     <script type="text/javascript" src="./js/popper.min.js"></script>
 
     <script type="text/javascript" src="./js/dados.js"></script>
-
+    
     <script type="text/javascript" src="./js/app.js"></script>
+
+    
 
 </body>
 

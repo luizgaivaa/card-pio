@@ -5,7 +5,7 @@
 <head>
 
     <meta charset="UTF-8" />
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Restaurante - Bem vindo</title>
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="./css/fontawesome.css">
 
     <link rel="stylesheet" href="./css/main.css">
-     
+    <link rel="stylesheet" href="./css/responsivo.css">
     <link rel="stylesheet" href="./css/animate.css">
 
 </head>
@@ -25,12 +25,10 @@
 <body>
 
     <div class="container-mensagens" id="container-mensagens">
-
-    
     
     </div>
 
-    <a class="botao-carrinho">
+    <a class="botao-carrinho hidden animate bounceIn" onclick="cardapio.metodos.abrirCarrinho(true)">
         <div class="badge-total-carrinho">0</div>
         <i class="fas fa-shopping-bag"></i>
     </a>
@@ -41,7 +39,7 @@
 
             <nav class="navbar navbar-expand lg pl-0 pr-0 col-one">
 
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand wow fadeIn" href="#">
 
                     <img src="./img/logo.png" width="160" class="img-logo" />
 
@@ -59,7 +57,7 @@
 
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
 
-                    <ul class="navbar-nav ml-auto mr-auto">
+                    <ul class="navbar-nav ml-auto mr-auto wow fadeIn">
 
                         <li class="nav-item"><a href="#reservas" class="nav-link"><b>Reservas</b></a></li>
 
@@ -71,12 +69,12 @@
 
                     </ul>
 
-                    <a class="btn btn-white btn-icon">
+                    <a class="btn btn-white btn-icon wow fadeIn" onclick="cardapio.metodos.abrirCarrinho(true)">
                        
                         Meu carrinho
 
-                        <span class="icon">
-                            <div class="container-total-carrinho badge-total-carrinho">0</div>
+                        <span class="icon" >
+                            <div class="container-total-carrinho badge-total-carrinho hidden">0</div>
                             <i class="fas fa-shopping-bag"></i>
 
                         </span>
@@ -101,23 +99,17 @@
 
                     <div class="d-flex text-banner">
 
-                        <h1><b>Escolha a sua comida <b class="color-primary">favorita.</b></b></h1>
-                        <p>Aproveite nosso cardápio! Escolha o que desejar e receba em sua casa de forma rápida e
+                        <h1 class="wow fadeInLeft"><b>Escolha a sua comida <b class="color-primary">favorita.</b></b></h1>
+                        <p class="wow fadeInLeft delay-02s">Aproveite nosso cardápio! Escolha o que desejar e receba em sua casa de forma rápida e
                             segura.</p>
 
-                        <div>
+                        <div class="wow fadeIn delay-05s">
 
-                            <a class="btn btn-yellow mt-4 mr-3" href="">Ver Cardápio</a>
+                            <a class="btn btn-yellow mt-4 mr-3" href="#cardapio">Ver Cardápio</a>
 
-                            <a class="btn btn-white btn-icon-left mt-4">
+                            <a class="btn btn-white btn-icon-left mt-4" href="#" id="btnLigar">
 
-                                <span class="icon-left">
-
-                                    <i class="fa fa-phone"></i>
-
-                                </span>
-
-                                4002-8922
+                               
 
                             </a>
 
@@ -125,26 +117,26 @@
 
                     </div>
 
-                    <a class="btn btn-sm btn-white btn-social mt-4 mr-3" href="">
+                    <a class="btn btn-sm btn-white btn-social mt-4 mr-3 wow fadeIn delay-07s" href="https://www.instagram.com/gominho_ferreira" target="_blank">
 
                         <i class="fab fa-instagram"></i>
 
                     </a>
 
-                    <a class="btn btn-sm btn-white btn-social mt-4 mr-3"
-                        href="">
+                    <a class="btn btn-sm btn-white btn-social mt-4 mr-3 wow fadeIn delay-07s"
+                        href="#">
 
                         <i class="fab fa-facebook"></i>
 
                     </a>
 
-                    <a class="btn btn-sm btn-white btn-social mt-4 mr-3">
+                    <a id="btnWhatsapp-footer" target="_blank" class="btn btn-sm btn-white btn-social mt-4 mr-3 wow fadeIn delay-07s" href="#">
 
                         <i class="fab fa-whatsapp"></i>
 
                     </a>
 
-                    <a class="btn btn-sm btn-white btn-social mt-4" href="">
+                    <a class="btn btn-sm btn-white btn-social mt-4 wow fadeIn delay-07s" href="#">
 
                         <i class="fab fa-youtube"></i>
 
@@ -154,15 +146,15 @@
 
                 <div class="col-6">
 
-                    <div class="card-banner"></div>
+                    <div class="card-banner wow fadeIn delay-02s"></div>
 
-                    <div class="d-flex img-banner">
+                    <div class="d-flex img-banner wow fadeIn delay-05s  ">
 
                         <img src="./img/burguer.png">
 
                     </div>
 
-                    <div class="card card-case">
+                    <div class="card card-case wow fadeInRight delay-07s">
 
                         "Entrega rápida e funcionários simpáticos.
                         <br>A comida chegou quente e <br>
@@ -170,7 +162,7 @@
 
                         <span class="card-case-name">
 
-                            <b>Steve - Minecraft</b>
+                            <b>Cliente Legal</b>
 
                         </span>
 
@@ -192,7 +184,7 @@
 
             <div class="class row">
 
-                <div class="col-12 text-center mb-5">
+                <div class="col-12 text-center mb-5 wow fadeIn">
 
                     <span class="hint-title"><b>Serviços</b></span>
 
@@ -204,7 +196,7 @@
 
                 </div>
 
-                <div class="col-4 mb-5">
+                <div class="col-4 mb-5 wow fadeInUp">
 
                     <div class="card-icon text-center">
 
@@ -226,7 +218,7 @@
 
                 </div>
 
-                <div class="col-4 mb-5">
+                <div class="col-4 mb-5 wow fadeInUp">
 
                     <div class="card-icon text-center">
 
@@ -248,7 +240,7 @@
 
                 </div>
 
-                <div class="col-4 mb-5">
+                <div class="col-4 mb-5 wow fadeInUp">
 
                     <div class="card-icon text-center">
 
@@ -284,7 +276,7 @@
 
             <div class="row">
 
-                <div class="col-12 text-center mb-5">
+                <div class="col-12 text-center mb-5 wow fadeIn">
 
                     <span class="hint-title"><b>Cardápio</b></span>
 
@@ -296,7 +288,7 @@
 
                 </div>
 
-                <div class="col-12 container-menu">
+                <div class="col-12 container-menu wow fadeInUp">
 
                     <a id="menu-burgers" class="btn btn-white btn-sm mr-3" onclick='cardapio.metodos.obterItensCardapio("burgers")'>
 
@@ -347,7 +339,7 @@
                        
                     </div>
 
-                    <div class="col-12 text-center mt-4" >
+                    <div class="col-12 text-center mt-4 wow fadeInUp" >
 
                         <a id="btnVerMais" name="btnVerMais" onclick='cardapio.metodos.verMais()' class="btn btn-white btn-sm">Ver mais</a>
 
@@ -373,9 +365,9 @@
 
                 <div class="col-5 text-center">
 
-                    <div class="card-depoimentos"></div>
+                    <div class="card-depoimentos wow fadeIn"></div>
 
-                    <div class="d-flex img-banner">
+                    <div class="d-flex img-banner wow fadeInLeft delay-02s">
 
                         <img src="./img/pizzas.png" />
 
@@ -385,16 +377,16 @@
 
                 <div class="col-7">
 
-                    <span class="hint-title"><b>Depoimentos</b></span>
+                    <span class="hint-title wow fadeIn"><b>Depoimentos</b></span>
 
-                    <h1 class="title">
+                    <h1 class="title wow fadeIn">
 
                         <b>O que dizem sobre nós</b>
                     </h1>
 
                     <div class="mb-5">
 
-                        <div class="depoimento" id="depoimento-1">
+                        <div class="depoimento animate fadeIn" id="depoimento-1">
 
                             <div class="container-dados-depoimento">
 
@@ -437,7 +429,7 @@
                         </div>
 
 
-                        <div class="depoimento hidden" id="depoimento-2">
+                        <div class="depoimento hidden animate fadeIn" id="depoimento-2">
 
                             <div class="container-dados-depoimento">
 
@@ -479,7 +471,7 @@
 
                         </div>
 
-                        <div class="depoimento hidden" id="depoimento-3">
+                        <div class="depoimento hidden animate fadeIn" id="depoimento-3">
 
                             <div class="container-dados-depoimento">
 
@@ -525,11 +517,11 @@
 
                     </div>
 
-                    <a class="btn btn-sm btn-white btn-social mr-3 active">1</a>
+                    <a id="btnDepoimento-1" onclick="cardapio.metodos.abrirDepoimento(1)" class="active btn btn-sm btn-white btn-social mr-3 wow fadeIn">1</a>
 
-                    <a class="btn btn-sm btn-white btn-social mr-3">2</a>
+                    <a id="btnDepoimento-2" onclick="cardapio.metodos.abrirDepoimento(2)" class="btn btn-sm btn-white btn-social mr-3 wow fadeIn">2</a>
 
-                    <a class="btn btn-sm btn-white btn-social">3</a>
+                    <a id="btnDepoimento-3" onclick="cardapio.metodos.abrirDepoimento(3)" class="btn btn-sm btn-white btn-social wow fadeIn">3</a>
 
                 </div>
 
@@ -539,15 +531,15 @@
 
     </section>
 
-    <section class="reserva" id="reserva">
+    <section class="reserva" id="reservas">
 
         <div class="row">
 
-            <div class="card-reserva">
+            <div class="card-reserva wow fadeIn">
 
                 <div class="row conteudo-reserva">
 
-                    <div class="col-6 text ml-auto">
+                    <div class="col-6 text ml-auto ">
 
                         <div class="titulo">
 
@@ -568,7 +560,7 @@
 
                         <div class="botao-reserva">
 
-                            <a class="btn btn-yellow mt-4 mr-3">Fazer reserva</a>
+                            <a class="btn btn-yellow mt-4 mr-3 wow fadeIn delay-05s" href="#" id="btnReserva" target="_blank">Fazer reserva</a>
 
                         </div>
 
@@ -602,13 +594,13 @@
 
             <div class="row">
 
-                <div class="col-3 container-logo-footer">
+                <div class="col-3 container-logo-footer wow fadeIn">
 
                     <img class="logo-footer" src="./img/logo.png">
 
                 </div>
 
-                <div class="col-6 container-texto-footer">
+                <div class="col-6 container-texto-footer wow fadeIn">
 
                     <p class="mb-0">
 
@@ -618,28 +610,28 @@
 
                 </div>
 
-                <div class="col-3 container-redes-footer">
+                <div class="col-3 container-redes-footer wow fadeIn">
 
-                    <a class="btn btn-sm btn-white btn-social mt-4" href="https://www.instagram.com/o_pedro_hh/">
+                    <a class="btn btn-sm btn-white btn-social mt-4" href="#">
 
                         <i class="fab fa-instagram"></i>
 
                     </a>
 
                     <a class="btn btn-sm btn-white btn-social mt-4"
-                        href="https://www.facebook.com/share/5TP9JzphRvT9DggE/?mibextid=qi20mg">
+                        href="#">
 
                         <i class="fab fa-facebook"></i>
 
                     </a>
 
-                    <a class="btn btn-sm btn-white btn-social mt-4">
+                    <a href="#" id="btnWhatsapp" target="_blank" class="btn btn-sm btn-white btn-social mt-4">
 
-                        <i class="fab fa-whatsapp"></i>
+                        <i  class="fab fa-whatsapp"></i>
 
                     </a>
 
-                    <a class="btn btn-sm btn-white btn-social mt-4" href="https://www.youtube.com/@Turt-turt">
+                    <a class="btn btn-sm btn-white btn-social mt-4" href="#">
 
                         <i class="fab fa-youtube"></i>
 
@@ -653,21 +645,24 @@
 
     </section>
 
-    <div class="modal-full hidden" id="modalCarrinho">
+
+
+    
+    <div class="modal-full animate fadeIn hidden" id="modalCarrinho">
 
         <div class="m-header">
 
             <div class="container">
 
-                <a class="btn btn-white btn-sm float-right">Fechar</a>
+                <a class="btn btn-white btn-sm float-right animate bounceIn " onclick="cardapio.metodos.abrirCarrinho(false)">Fechar</a>
 
                 <div class="etapas">
 
-                    <div class="etapa etapa1 active">1</div>
+                    <div class="etapa etapa1 animate fadeIn active">1</div>
 
-                    <div class="etapa etapa2">2</div>
+                    <div class="etapa etapa2 animate fadeIn">2</div>
 
-                    <div class="etapa etapa3">3</div>
+                    <div class="etapa etapa3 animate fadeIn">3</div>
 
                 </div>
 
@@ -687,258 +682,10 @@
             <div class="container">
 
                 <div id="itensCarrinho" class="row mr-0 ml-0">
-
-                    <div class="col-12 item-carrinho">
-
-                        <div class="img-produto">
-
-                            <img
-                                src="./img/cardapio/burguers/burger-au-poivre-kit-4-pack.3ca0e39b02db753304cd185638dad518.jpg">
-
-                        </div>
-
-                        <div class="dados-produto">
-
-                            <p class="title-produto"><b>X-Salada</b></p>
-
-                            <p class="price-produto"><b>R$: 20,20</b></p>
-
-                        </div>
-
-                        <div class="add-carrinho">
-
-                            <span class="btn-menos"><i class="fas fa-minus"></i></span>
-
-                            <span class="btn-numero-itens">0</span>
-
-                            <span class="btn-mais"><i class="fas fa-plus"></i></span>
-
-                            <span class="btn btn-remove"><i class="fa fa-times"></i></span>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-12 item-carrinho">
-
-                        <div class="img-produto">
-
-                            <img
-                                src="./img/cardapio/burguers/goldbelly-burger-blend-1-lb.13a21b66edf7173a59c75c3a6d2f981b.jpg">
-
-                        </div>
-
-                        <div class="dados-produto">
-
-                            <p class="title-produto"><b>X-Carne</b></p>
-
-                            <p class="price-produto"><b>R$: 35,99</b></p>
-
-                        </div>
-
-                        <div class="add-carrinho">
-
-                            <span class="btn-menos"><i class="fas fa-minus"></i></span>
-
-                            <span class="btn-numero-itens">0</span>
-
-                            <span class="btn-mais"><i class="fas fa-plus"></i></span>
-
-                            <span class="btn btn-remove"><i class="fa fa-times"></i></span>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-12 item-carrinho">
-
-                        <div class="img-produto">
-
-                            <img
-                                src="./img/cardapio/burguers/gotts-complete-cheeseburger-kit-for-4.7bdc74104b193427b3fe6eae39e05b5e.jpg">
-
-                        </div>
-
-                        <div class="dados-produto">
-
-                            <p class="title-produto"><b>X-Cheddar</b></p>
-
-                            <p class="price-produto"><b>R$: 25,50</b></p>
-
-                        </div>
-
-                        <div class="add-carrinho">
-
-                            <span class="btn-menos"><i class="fas fa-minus"></i></span>
-
-                            <span class="btn-numero-itens">1</span>
-
-                            <span class="btn-mais"><i class="fas fa-plus"></i></span>
-
-                            <span class="btn btn-remove"><i class="fa fa-times"></i></span>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-12 item-carrinho">
-
-                        <div class="img-produto">
-
-                            <img
-                                src="./img/cardapio/burguers/gotts-complete-cheeseburger-kit-for-8.092aa049d00286fa1733d720decc782e.jpg">
-
-                        </div>
-
-                        <div class="dados-produto">
-
-                            <p class="title-produto"><b>Combo 2 X-Burguer</b></p>
-
-                            <p class="price-produto"><b>R$: 37,00</b></p>
-
-                        </div>
-
-                        <div class="add-carrinho">
-
-                            <span class="btn-menos"><i class="fas fa-minus"></i></span>
-
-                            <span class="btn-numero-itens">0</span>
-
-                            <span class="btn-mais"><i class="fas fa-plus"></i></span>
-
-                            <span class="btn btn-remove"><i class="fa fa-times"></i></span>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-12 item-carrinho">
-
-                        <div class="img-produto">
-
-                            <img
-                                src="./img/cardapio/burguers/Gramercy-Tavern-Burger-and-Kielbasa-Kit-6.4.21-72ppi-1x1-15.jpg">
-
-                        </div>
-
-                        <div class="dados-produto">
-
-                            <p class="title-produto"><b>X-Frango</b></p>
-
-                            <p class="price-produto"><b>R$: 23,50</b></p>
-
-                        </div>
-
-                        <div class="add-carrinho">
-
-                            <span class="btn-menos"><i class="fas fa-minus"></i></span>
-
-                            <span class="btn-numero-itens">1</span>
-
-                            <span class="btn-mais"><i class="fas fa-plus"></i></span>
-
-                            <span class="btn btn-remove"><i class="fa fa-times"></i></span>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-12 item-carrinho">
-
-                        <div class="img-produto">
-
-                            <img
-                                src="./img/cardapio/burguers/Gramercy-Tavern-Burger-and-Kielbasa-Kit-6.4.21-72ppi-1x1-47.jpg">
-
-                        </div>
-
-                        <div class="dados-produto">
-
-                            <p class="title-produto"><b>Combo 3 X-Bacon</b></p>
-
-                            <p class="price-produto"><b>R$: 34,90</b></p>
-
-                        </div>
-
-                        <div class="add-carrinho">
-
-                            <span class="btn-menos"><i class="fas fa-minus"></i></span>
-
-                            <span class="btn-numero-itens">0</span>
-
-                            <span class="btn-mais"><i class="fas fa-plus"></i></span>
-
-                            <span class="btn btn-remove"><i class="fa fa-times"></i></span>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-12 item-carrinho">
-
-                        <div class="img-produto">
-
-                            <img
-                                src="./img/cardapio/burguers/handf-double-stack-burger-kit-for-4.4ee9f54b1d6087e9996335f07c13e5cd.jpg">
-
-                        </div>
-
-                        <div class="dados-produto">
-
-                            <p class="title-produto"><b>Hamburger com mais carne</b></p>
-
-                            <p class="price-produto"><b>R$: 38,00</b></p>
-
-                        </div>
-
-                        <div class="add-carrinho">
-
-                            <span class="btn-menos"><i class="fas fa-minus"></i></span>
-
-                            <span class="btn-numero-itens">0</span>
-
-                            <span class="btn-mais"><i class="fas fa-plus"></i></span>
-
-                            <span class="btn btn-remove"><i class="fa fa-times"></i></span>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-12 item-carrinho">
-
-                        <div class="img-produto">
-
-                            <img
-                                src="./img/cardapio/burguers/shake-shack-shackburger-16-pack.316f8b09144db65931ea29e34869287a.jpg">
-
-                        </div>
-
-                        <div class="dados-produto">
-
-                            <p class="title-produto"><b>X-Burguer simples</b></p>
-
-                            <p class="price-produto"><b>R$: 20,00</b></p>
-
-                        </div>
-
-                        <div class="add-carrinho">
-
-                            <span class="btn-menos"><i class="fas fa-minus"></i></span>
-
-                            <span class="btn-numero-itens">1</span>
-
-                            <span class="btn-mais"><i class="fas fa-plus"></i></span>
-
-                            <span class="btn btn-remove"><i class="fa fa-times"></i></span>
-
-                        </div>
-
-                    </div>
-
+                   
                 </div>
 
-                <div id="localEntrega" class="row mr-0 ml-0 ">
+                <div id="localEntrega" class="row mr-0 ml-0 hidden">
 
                     <div id="localEntrega" class="row mr-0 ml-0 ">
 
@@ -950,7 +697,7 @@
 
                                 <input id="txtCEP" type="text" class="form-control" />
 
-                                <a class="btn btn-yellow btn-sm">
+                                <a class="btn btn-yellow btn-sm" onclick="cardapio.metodos.buscarCep()">
 
                                     <i class="fa fa-search"></i>
 
@@ -994,7 +741,7 @@
 
                                 <label>Número:</label>
 
-                                <input id="txtNum" type="text" class="form-control" />
+                                <input id="txtNumero" type="text" class="form-control" />
 
                             </div>
 
@@ -1006,7 +753,7 @@
 
                                 <label>Cidade:</label>
 
-                                <input id="txtEndereco" type="text" class="form-control" />
+                                <input id="txtCidade" type="text" class="form-control" />
 
                             </div>
 
@@ -1018,7 +765,7 @@
 
                                 <label>Complemento:</label>
 
-                                <input id="txtBairro" type="text" class="form-control" />
+                                <input id="txtComplemento" type="text" class="form-control" />
 
                             </div>
 
@@ -1030,7 +777,7 @@
 
                                 <label>UF:</label>
 
-                                <select  class="form-control" id="">
+                                <select  class="form-control" id="ddlUf">
                                     <option value="">--</option>
                                     <option value="AC">AC</option>
                                     <option value="AL">AL</option>
@@ -1072,7 +819,7 @@
 
                 </div>
 
-                <div id="resumoCarrinho" class="row mr-0 ml-0">
+                <div id="resumoCarrinho"  class="row mr-0 ml-0 hidden">
                         
                     <div class="col-12">
 
@@ -1088,7 +835,7 @@
 
                         <div class="row" id="listaItensResumo">
 
-                            <div class="col-12 item-carrinho resumo">
+                            <!-- <div class="col-12 item-carrinho resumo">
 
                                 <div class="img-produto-resumo">
 
@@ -1116,7 +863,7 @@
                                     x <b>3</b>
                                 </p>
 
-                            </div>
+                            </div> -->
 
                             
 
@@ -1143,11 +890,11 @@
                         <div class="dados-produto">
                             <p class="dados-produto">
                                 <p class="texto-endereco">
-                                    <b id="resumoEndereco">Rua dos Bobos, 0, bairro Itamaraty</b>
+                                    <b id="resumoEndereco"></b>
                                 </p>
                             
                                 <p class="cidade-endereco" id="cidadeEndereco">
-                                    São Paulo - SP CEP 00000-000
+                                </p>
                                 </p>
                             </p>
                         </div>
@@ -1171,7 +918,7 @@
 
                         <span>Subtotal</span>
 
-                        <span id="lblSubtotal">R$ 69,00</span>
+                        <span id="lblSubTotal"></span>
 
                     </p>
 
@@ -1179,7 +926,7 @@
 
                         <span><i class="fas fa-motorcycle"></i>Entrega:</span>
 
-                        <span id="lblValorEntrega">R$ 5,00</span>
+                        <span id="lblValorEntrega"></span>
 
                     </p>
 
@@ -1187,19 +934,19 @@
 
                     <span><b>Total:</b></span>
 
-                    <span class="valor-total" id="lblValorTotal"><b>R$ 74,00</b></span>
+                    <span class="valor-total" id="lblValorTotal"><b></b></span>
 
-                    </p>
+                 
 
                 </div>
 
-                <a class="btn btn-yellow float-right" id="btnEtapaPedido">Continuar</a>
+                <a onclick="cardapio.metodos.carregarEndereco()" class="btn btn-yellow float-right" id="btnEtapaPedido">Continuar</a>
 
-                <a class="btn btn-yellow float-right hidden" id="btnEtapaEndereco">Revisar Pediro</a>
+                <a onclick="cardapio.metodos.resumoPedido()" class="btn btn-yellow float-right hidden" id="btnEtapaEndereco"   >Revisar Pedido</a>
 
-                <a class="btn btn-yellow float-right hidden" id="btnEtapaResumo">EnviarPedido</a>
+                <a class="btn btn-yellow float-right hidden" href="#" id="btnEtapaResumo" target="_blank">Enviar Pedido</a>
 
-                <a class="btn btn-white float-right mr-3" id="btnEtapaResumo">Voltar</a>
+                <a onclick="cardapio.metodos.voltarEtapa()" class="btn btn-white float-right mr-3 hidden" id="btnVoltar">Voltar</a>
 
             </div>
 
@@ -1221,7 +968,9 @@
     
     <script type="text/javascript" src="./js/app.js"></script>
 
-    
+    <script type="text/javascript" src="./js/wow.min.js"></script>
+
+    <script>new WOW().init();</script>
 
 </body>
 

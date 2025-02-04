@@ -29,7 +29,7 @@ body {
   color: var(--color-text);
 }
 
-
+  
 b {
   font-family: 'PoppinsMedium', 'Rubik', sans-serif;
 }
@@ -499,7 +499,7 @@ a.navbar-brand {
 }
 
 .hidden {
-  display: none !important; 
+  display: none !important;
 }
 
 .reserva {
@@ -789,12 +789,12 @@ select.form-control {
   margin-bottom: 0;
 }
 
-.img-map{
+.img-map {
   width: 50px;
   height: 50px;
   background-color: var(--color-secondary);
   color: var(--color-black);
-  font-size: 22px;  
+  font-size: 22px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -810,7 +810,7 @@ select.form-control {
   margin-bottom: 0;
 }
 
-.badge-total-carrinho{
+.badge-total-carrinho {
   width: 25px;
   height: 25px;
   position: absolute;
@@ -825,7 +825,7 @@ select.form-control {
   align-items: center;
 }
 
-.botao-carrinho{
+.botao-carrinho {
   position: fixed;
   right: 30px;
   bottom: 50px;
@@ -836,8 +836,8 @@ select.form-control {
   justify-content: center;
   align-items: center;
   font-size: 20px;
-  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
-  color: var(--color-black-heavy)!important;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  color: var(--color-black-heavy) !important;
   border-radius: 50px;
   cursor: pointer;
   z-index: 1;
@@ -848,20 +848,39 @@ select.form-control {
   right: 20px;
   top: 20px;
   z-index: 9999;
-  }
+}
 
-  .toast {
-    color: var(--color-white);
-    padding: 10px 25px;
-    font-size: 18px;
-    border-radius: 15px;
-    margin-bottom: 10px;
-    }
+.toast {
+  color: var(--color-white);
+  padding: 10px 25px;
+  font-size: 18px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
 
 .toast.red {
-background-color: var(--color-red);
+  background-color: var(--color-red);
 }
 
 .toast.green {
-background-color: var(--color-green);
+  background-color: var(--color-green);
+}
+
+.carrinho-vazio {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.carrinho-vazio i {
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 50px;
+  margin-bottom: 10px;
 }

@@ -1,3 +1,4 @@
+
 /* Desktop (col-lg) 992px+ */
 @media (min-width: 992px) {
 
@@ -15,6 +16,8 @@
 
 /* Tablets e Celulares (col) 0px a 767px */
 @media (max-width: 767px) {
+
+
 
     .no-mobile {
         display: none!important;
